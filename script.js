@@ -185,8 +185,6 @@ async function fetchLatestVersion() {
 // Download Button Functionality
 async function initDownloadButtons() {
     const downloadButtons = document.querySelectorAll('.download-btn');
-    const GITHUB_RELEASES_URL = 'https://github.com/Adivise/ExpertiseX/releases/latest';
-    
     // Fetch latest version
     const latestVersion = await fetchLatestVersion();
     
@@ -240,12 +238,31 @@ async function initDownloadButtons() {
                 
                 // Add success state
                 const originalText = this.querySelector('.download-text').textContent;
-                this.querySelector('.download-text').textContent = 'Redirecting...';
+                this.querySelector('.download-text').textContent = 'Downloading...';
                 this.style.background = 'var(--card-bg)';
-                
+
+                // auto change version
+                const version = latestVersion;
+                let downloadUrl = '';
+                if (this.classList.contains('windows')) {
+                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.exe';
+                } else if (this.classList.contains('mac')) {
+                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.dmg';
+                } else if (this.classList.contains('linux')) {
+                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.AppImage';
+                }
+
+                // Create a temporary link element
+                const link = document.createElement('a');
+                link.href = downloadUrl;
+                link.download = 'expertisex-' + version + '.exe'; // Default filename
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
                 // Redirect to GitHub releases after a short delay
                 setTimeout(() => {
-                    window.open(GITHUB_RELEASES_URL, '_blank');
+                    window.open(downloadUrl, '_blank');
                     this.querySelector('.download-text').textContent = originalText;
                 }, 500);
             }, 1000);
