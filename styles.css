@@ -272,6 +272,30 @@ body {
     font-size: 1.4rem;
 }
 
+.hero .open-source-btn {
+    background: #000000;
+    color: white;
+    padding: 1.2rem 2.5rem;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    transition: all 0.3s ease;
+    width: 250px;
+    margin: 0 auto;
+}
+
+.hero .open-source-btn:hover {
+    background: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.hero .open-source-btn i {
+    font-size: 1.4rem;
+}
+
 /* Buttons */
 .btn {
     display: inline-block;
