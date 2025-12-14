@@ -245,7 +245,7 @@ async function initDownloadButtons() {
                 const version = latestVersion;
                 let downloadUrl = '';
                 if (this.classList.contains('windows')) {
-                    downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '-setup.exe';
+                    downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '.exe';
                 } else if (this.classList.contains('mac')) {
                     downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '.dmg';
                 } else if (this.classList.contains('linux')) {
