@@ -10,9 +10,9 @@
 }
 
 @keyframes glow {
-    0% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
-    50% { box-shadow: 0 0 20px rgba(255, 255, 255, 0.8); }
-    100% { box-shadow: 0 0 5px rgba(255, 255, 255, 0.5); }
+    0% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.5); }
+    50% { box-shadow: 0 0 20px rgba(34, 197, 94, 0.8); }
+    100% { box-shadow: 0 0 5px rgba(34, 197, 94, 0.5); }
 }
 
 @keyframes slideIn {
@@ -32,16 +32,16 @@
 }
 
 :root {
-    --primary-color: #ffffff;
-    --secondary-color: #1a1a1a;
+    --primary-color: #22c55e;
+    --secondary-color: #16a34a;
     --background-color: #000000;
     --text-color: #ffffff;
-    --accent-color: #ffffff;
-    --gradient-start: #ffffff;
-    --gradient-end: #808080;
-    --card-bg: rgba(255, 255, 255, 0.03);
-    --card-border: rgba(255, 255, 255, 0.1);
-    --hover-color: #333333;
+    --accent-color: #22c55e;
+    --gradient-start: #22c55e;
+    --gradient-end: #16a34a;
+    --card-bg: rgba(34, 197, 94, 0.03);
+    --card-border: rgba(34, 197, 94, 0.1);
+    --hover-color: #15803d;
 }
 
 * {
@@ -111,7 +111,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, rgba(0, 0, 0, 1) 70%);
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, rgba(0, 0, 0, 1) 70%);
     position: relative;
     overflow: hidden;
 }
@@ -121,7 +121,7 @@ body {
     position: absolute;
     width: 200%;
     height: 200%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 50%);
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, transparent 50%);
     animation: rotate 20s linear infinite;
 }
 
@@ -358,7 +358,7 @@ body {
     background: linear-gradient(
         45deg,
         transparent,
-        rgba(255, 255, 255, 0.1),
+        rgba(34, 197, 94, 0.1),
         transparent
     );
     transform: rotate(45deg);
@@ -383,7 +383,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -476,7 +476,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at bottom left, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at bottom left, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -537,14 +537,14 @@ body {
 .category li {
     margin: 1rem 0;
     padding: 0.8rem 1.2rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: rgba(34, 197, 94, 0.03);
     border-radius: 10px;
     transition: all 0.3s ease;
     color: rgba(255, 255, 255, 0.8);
 }
 
 .category li:hover {
-    background: rgba(255, 255, 255, 0.05);
+    background: rgba(34, 197, 94, 0.05);
     transform: translateX(5px);
     color: var(--primary-color);
 }
@@ -563,7 +563,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at top right, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at top right, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -762,7 +762,7 @@ body {
 .download-btn .ripple {
     position: absolute;
     border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(34, 197, 94, 0.3);
     transform: scale(0);
     animation: ripple 0.6s linear;
     pointer-events: none;
@@ -807,7 +807,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: radial-gradient(circle at center, rgba(255, 255, 255, 0.05) 0%, transparent 70%);
+    background: radial-gradient(circle at center, rgba(34, 197, 94, 0.05) 0%, transparent 70%);
     pointer-events: none;
 }
 
@@ -1004,7 +1004,7 @@ footer::before {
     left: 0;
     width: 100%;
     height: 100%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    background: linear-gradient(45deg, transparent, rgba(34, 197, 94, 0.2), transparent);
     transform: translateX(-100%);
     transition: transform 0.6s ease;
 }

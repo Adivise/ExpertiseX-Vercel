@@ -172,13 +172,13 @@ document.head.appendChild(style);
 // GitHub API Integration
 async function fetchLatestVersion() {
     try {
-        const response = await fetch('https://api.github.com/repos/Adivise/ExpertiseX/releases/latest');
+        const response = await fetch('https://api.github.com/repos/Adivise/sosu/releases/latest');
         if (!response.ok) throw new Error('Failed to fetch version');
         const data = await response.json();
         return data.tag_name.replace('v', ''); // Remove 'v' prefix if present
     } catch (error) {
         console.error('Error fetching version:', error);
-        return '2.9.0'; // Fallback to current version from package.json
+        return '1.0.3'; // Fallback to current version from package.json
     }
 }
 
@@ -245,17 +245,17 @@ async function initDownloadButtons() {
                 const version = latestVersion;
                 let downloadUrl = '';
                 if (this.classList.contains('windows')) {
-                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.exe';
+                    downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '-setup.exe';
                 } else if (this.classList.contains('mac')) {
-                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.dmg';
+                    downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '.dmg';
                 } else if (this.classList.contains('linux')) {
-                    downloadUrl = 'https://github.com/Adivise/ExpertiseX/releases/download/v' + version + '/expertisex-' + version + '.AppImage';
+                    downloadUrl = 'https://github.com/Adivise/sosu/releases/download/v' + version + '/sosu-' + version + '.AppImage';
                 }
 
                 // Create a temporary link element
                 const link = document.createElement('a');
                 link.href = downloadUrl;
-                link.download = 'expertisex-' + version + '.exe'; // Default filename
+                link.download = 'sosu-' + version + '-setup.exe'; // Default filename
                 document.body.appendChild(link);
                 link.click();
                 document.body.removeChild(link);
